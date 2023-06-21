@@ -11,12 +11,6 @@
       margin: 0;
       padding: 0;
     }
-    h1, h2 {
-      color: #333;
-    }
-    section {
-      margin-bottom: 30px;
-    }
 
     /* Header styles */
     header {
@@ -27,40 +21,112 @@
 
     header h1 {
       color: #fff;
+      margin: 0;
+      font-size: 32px;
+    }
+
+    /* Introduction section styles */
+    section.intro {
+      background-color: #f0f0f0;
+      padding: 30px;
+    }
+
+    section.intro h2 {
+      color: #006699;
+      margin-top: 0;
+      font-size: 24px;
     }
 
     /* Benefits section styles */
-    ul {
+    section.benefits {
+      padding: 30px;
+    }
+
+    section.benefits h2 {
+      color: #006699;
+      margin-top: 0;
+      font-size: 24px;
+    }
+
+    ul.benefits-list {
       list-style-type: none;
       padding-left: 0;
     }
 
-    li::before {
-      content: "\2022";
-      color: #006699;
-      font-weight: bold;
-      display: inline-block;
-      width: 1em;
-      margin-left: -1em;
+    ul.benefits-list li {
+      padding: 8px 0;
+      margin-left: 20px;
+      position: relative;
+    }
+
+    ul.benefits-list li::before {
+      content: "";
+      position: absolute;
+      left: -20px;
+      top: 10px;
+      width: 6px;
+      height: 6px;
+      border-radius: 50%;
+      background-color: #006699;
     }
 
     /* Image gallery styles */
+    section.gallery {
+      padding: 30px;
+      text-align: center;
+    }
+
+    section.gallery h2 {
+      color: #006699;
+      margin-top: 0;
+      font-size: 24px;
+    }
+
     .image-gallery {
       display: flex;
-      justify-content: space-between;
+      justify-content: center;
       flex-wrap: wrap;
+      margin-top: 20px;
     }
 
     .image-gallery img {
       width: 300px;
-      margin-bottom: 20px;
+      margin: 10px;
+      border-radius: 8px;
+      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
     }
 
     /* Call to action section styles */
-    a {
-      color: #006699;
+    section.cta {
+      background-color: #006699;
+      color: #fff;
+      padding: 30px;
+      text-align: center;
+    }
+
+    section.cta h2 {
+      margin-top: 0;
+      font-size: 24px;
+    }
+
+    section.cta p {
+      font-size: 18px;
+      margin-bottom: 20px;
+    }
+
+    section.cta a {
+      color: #fff;
       text-decoration: none;
       font-weight: bold;
+      background-color: #fff;
+      color: #006699;
+      border-radius: 4px;
+      padding: 10px 20px;
+      transition: background-color 0.3s ease;
+    }
+
+    section.cta a:hover {
+      background-color: #005588;
     }
 
     /* Footer styles */
@@ -69,6 +135,10 @@
       color: #fff;
       padding: 20px;
       text-align: center;
+    }
+
+    footer p {
+      margin: 0;
     }
   </style>
 </head>
@@ -79,16 +149,16 @@
   </header>
 
   <!-- Introduction section -->
-  <section>
+  <section class="intro">
     <h2>About the Troy Learning Lab</h2>
     <p>The Troy Learning Lab is an innovative educational institution dedicated to providing high-quality learning experiences for students of all ages.</p>
     <p>Our mission is to foster a love for learning and support the academic growth of every student who joins us.</p>
   </section>
 
   <!-- Benefits section -->
-  <section>
+  <section class="benefits">
     <h2>Why Join the Troy Learning Lab?</h2>
-    <ul>
+    <ul class="benefits-list">
       <li>Individualized attention and small class sizes</li>
       <li>Experienced and highly qualified teachers</li>
       <li>Engaging and interactive learning materials</li>
@@ -98,10 +168,10 @@
   </section>
 
   <!-- Image gallery section -->
-  <section>
+  <section class="gallery">
     <h2>Explore Our Learning Environment</h2>
     <div class="image-gallery">
-      <img src="A25B28CF-2125-4697-8167-ED9BC5A1254B.png" alt"Design Process">
+      <img src="A25B28CF-2125-4697-8167-ED9BC5A1254B.png" alt="Design Process">
       <img src="img-placeholder.jpg" alt="Image description">
       <img src="img-placeholder.jpg" alt="Image description">
       <!-- Add more images here -->
@@ -109,7 +179,7 @@
   </section>
 
   <!-- Call to action section -->
-  <section>
+  <section class="cta">
     <h2>Join Us Today!</h2>
     <p>Experience the benefits of the Troy Learning Lab and unlock your full potential. Enroll now to secure your spot.</p>
     <a href="contact.html">Contact us</a> to learn more or schedule a visit to our facility.
